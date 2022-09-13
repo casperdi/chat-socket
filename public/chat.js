@@ -1,6 +1,6 @@
-/* 'use strict';
+ 'use strict';
 
-const socket = io('http://10.114.32.18');
+/*const socket = io('http://10.114.32.18');
 
 document.querySelector('form').addEventListener('submit', (event) => {
   event.preventDefault();
@@ -13,7 +13,7 @@ socket.on('chat message', (msg) => {
   const item = document.createElement('li');
   item.innerHTML = msg;
   document.getElementById('messages').appendChild(item);
-}); */
+});*/
 const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
@@ -29,7 +29,8 @@ const { username, room } = Qs.parse(parsedSearch);
 
 console.log(username, room);
 
-const socket = io();
+const socket = io('http://localhost:3000');
+//const socket = io('https://sweatbaby.norwayeast.cloudapp.azure.com');
 
 //Join chatroom
 socket.emit('joinRoom', { username, room });
@@ -66,13 +67,10 @@ chatForm.addEventListener('submit', (e) => {
 
 //Output message to DOM
 function outputMessage(message){
-    const div = document.createElement('div');
-    div.classList.add('message');
-    div.innerHTML = `<p class="meta">${message.username} <span>${message.time}</span></p>
-    <p class="text">
-        ${message.text}
-    </p>`;
-    document.querySelector('.chat-messages').appendChild(div);
+    const li = document.createElement('li');
+    li.classList.add('message');
+    li.innerHTML = `${message.username}: ${message.text}`;
+    document.querySelector('.chat-messages').appendChild(li);
 }
 
 //Add room name to DOM

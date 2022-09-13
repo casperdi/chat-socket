@@ -4,23 +4,15 @@
   "description": "demo Socket.IO based on chat example https://socket.io/get-started/chat/",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.1",
     "moment": "^2.27.0",
-    "socket.io": "^2.3.0"
+    "nodemon": "^2.0.19",
+    "socket.io": "^4.5.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.metropolia.fi:patricka/socket.io-demo.git"
-  },
-  "keywords": [
-    "express",
-    "Socket.IO",
-    "WebSocket"
-  ],
-  "author": "Patrick Ausderau",
-  "license": "GPL-3.0"
+  }
 }
