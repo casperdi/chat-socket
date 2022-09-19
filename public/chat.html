@@ -1,49 +1,246 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Chat</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <link href="/dist/output.css" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/@videojs/themes@1/dist/city/index.css"
+      rel="stylesheet"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
   </head>
   <body>
-      <div class="chat-container">
+    <div class="absolute w-full">
+      <div class="mx-auto bg-black opacity-80 hidden md:flex max-w-full px-4">
+        <div
+          class="flex items-center justify-between border-b-2 border-black py-6 md:justify-start md:space-x-10"
+        >
+          <div class="flex justify-start lg:w-0 lg:flex-1">
+            <a href="#">
+              <span class="sr-only text-emerald-800">Your Company</span>
+            </a>
+          </div>
+          <div class="-my-2 -mr-2 md:hidden"></div>
+          <nav id="menu-xl" class="hidden space-x-10 md:flex">
+            <a
+              href="index.html"
+              class="text-base font-medium text-antique-white hover:text-gray-900"
+              >Etusivu</a
+            >
+            <a
+              href="#"
+              class="text-base font-medium text-antique-white hover:text-gray-900"
+              >Ajankohtaista</a
+            >
+            <a
+              href="#"
+              class="text-base font-medium text-antique-white hover:text-gray-900"
+              >Ohjelma</a
+            >
+            <a
+              href="#"
+              class="text-base font-medium text-antique-white hover:text-gray-900"
+              >Yhteystiedot</a
+            >
+          </nav>
+        </div>
+      </div>
 
-          <header class="text-emerald-700">
-            <h1>Chat</h1>
-            <a href="index.html" class="btn">Leave Room</a>
-          </header>
+      <!--Mobile menu, show/hide based on mobile menu state.
+    
+        Entering: "duration-200 ease-out"
+          From: "opacity-0 scale-95"
+          To: "opacity-100 scale-100"
+        Leaving: "duration-100 ease-in"
+          From: "opacity-100 scale-100"
+          To: "opacity-0 scale-95"-->
+
+      <div
+        class="absolute z-10 inset-x-0 top-0 origin-top-right transform opacity-80 transition md:hidden"
+      >
+        <div
+          class="divide-y-2 divide-black bg-black shadow-lg ring-1 ring-black ring-opacity-5"
+        >
+          <div class="px-5 pt-5 pb-4">
+            <div class="flex items-center justify-between">
+              <div></div>
+              <div class="-mr-2">
+                <button
+                  type="button"
+                  id="menux"
+                  class="inline-flex items-center justify-center rounded-lg bg-antique-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset"
+                >
+                  <span class="sr-only">Close menu</span>
+                  <!-- Heroicon name: outline/x-mark -->
+                  <svg
+                    id="iconX"
+                    class="h-6 w-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                  <svg
+                    id="iconBurger"
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div id="dropdown" class="space-y-6 py-6 px-5 bg-black hidden">
+            <div class="grid grid-cols-1 gap-y-4 gap-x-8 opacity-1">
+              <a
+                href="index.html"
+                class="text-base font-medium text-antique-white hover:text-gray-700"
+                >Etusivu</a
+              >
+
+              <a
+                href="#"
+                class="text-base font-medium text-antique-white hover:text-gray-700"
+                >Ajankohtaista</a
+              >
+
+              <a
+                href="#"
+                class="text-base font-medium text-antique-white hover:text-gray-700"
+                >Ohjelma</a
+              >
+
+              <a
+                href="#"
+                class="text-base font-medium text-antique-white hover:text-gray-700"
+                >Yhteystiedot</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-container bg-tuscan-red h-screen pt-40 flex flex-col md:flex-nowrap p-5">
+        <video id="my-video" class="video-js vjs-theme-city vjs-casper w-auto h-auto md:w-2/3">
+          <source src="img/video.mp4" type="video/mp4" />
+          <!-- <source src="http://195.148.104.124:1935/jakelu/myStrea/playlist.m3u8" 
+        type="application/x-mpegURL"> -->
+        </video>
+      <div class="w-full md:w-1/3 md:ml-3 relative bg-antique-white mt-4 rounded-lg">
+        <header class="text-antique-white relative">
+          <h1 class="bg-black opacity-80 rounded-t-lg text-center text-2xl p-2 font-bold">LiveChat</h1>
+          <a href="index.html" class="btn absolute top-2" ><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg></a>
+        </header>
 
         <main class="chat-main">
-              <div class="chat-side">
-                <h3>Room Name:</h3>
-                <h2 id="room-name"></h2>
-                <h3>Users</h3>
-                <ul id="users"></ul>
-              </div>
-              <ul class="chat-messages"></ul>
+          <div class="chat-side">
+            <h2 id="room-name" class="text-center font-bold"></h2>
+            <h3 class="hidden">Users</h3>
+            <ul class="hidden" id="users"></ul>
+          </div>
+          <div class="h-full">
+            <ul class="chat-messages h-96 pb-5 overflow-scroll"></ul>
+          </div>
         </main>
-
-          <div class="chat-form-container">
-              <form id="chat-form" action="">
-                <input 
-                id="msg" 
-                type="text"
-                autocomplete="off" 
-                placeholder="Enter message"
-                required
-                />
-                <button class="btn">Send</button>
-            </form>
-        <script 
-        src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.1.2/qs.min.js" 
-        integrity="sha512-LIxZvLf3cF72wbVxt+3ajwseTY82yjgyVvAN2nQ2B037JtZPaVZRkaukU/JmG1EkbFmD9a7Wx5VAcosed0/u6g==" 
-        crossorigin="anonymous">
-        </script>
-        <script src="/socket.io/socket.io.js"></script>
-        <script src="chat.js"></script>
-        </div>
+        <form id="chat-form" class="absolute w-full bottom-0">
+          <label for="msg" class="sr-only">Your message</label>
+          <div
+            class="flex items-center py-2 px-3 bg-black opacity-80 rounded-lg"
+          >
+           <!-- <button
+              type="button"
+              class="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <button
+              type="button"
+              class="p-2 text-gray-500 rounded-lg cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            -->
+            <textarea
+              id="msg"
+              rows="1"
+              class="block mx-4 p-2.5 w-full text-sm text-black bg-antique-white rounded-lg border border-manatee focus:ring-manatee "
+              placeholder="Your message..."
+              required
+            ></textarea>
+            <button
+              type="submit"
+              class="inline-flex justify-center p-2 text-tuscan-red rounded-full cursor-pointer hover:text-red-900 bg-antique-white"
+            >
+              <svg
+                class="w-6 h-6 rotate-90"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+        
+      </div>
+      
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.1.2/qs.min.js"
+        integrity="sha512-LIxZvLf3cF72wbVxt+3ajwseTY82yjgyVvAN2nQ2B037JtZPaVZRkaukU/JmG1EkbFmD9a7Wx5VAcosed0/u6g=="
+        crossorigin="anonymous"
+      ></script>
+      <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="chat.js"></script>
+      <script src="menu.js"></script>
+      <script src="video.js"></script>
+      <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     </div>
+    <footer class="h-20 bg-manatee text-center"> Footer </footer>
   </body>
 </html>

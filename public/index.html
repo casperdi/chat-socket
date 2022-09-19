@@ -1,35 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Chat</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <link href="/dist/output.css" rel="stylesheet">
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link href="/dist/output.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="absolute   w-full ">
-      <div class="mx-auto bg-black opacity-80 hidden md:flex  max-w-full px-4 ">
-        <div class="flex items-center  justify-between border-b-2 border-black py-6 md:justify-start md:space-x-10">
+    <div class="absolute w-full">
+      <div class="mx-auto bg-black opacity-80 hidden md:flex max-w-full px-4">
+        <div
+          class="flex items-center justify-between border-b-2 border-black py-6 md:justify-start md:space-x-10"
+        >
           <div class="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span class="sr-only text-emerald-800">Your Company</span>
-              
             </a>
           </div>
-          <div class="-my-2 -mr-2 md:hidden">
-          </div>
+          <div class="-my-2 -mr-2 md:hidden"></div>
           <nav id="menu-xl" class="hidden space-x-10 md:flex">
-            <a href="#" class="text-base font-medium text-antique-white hover:text-gray-900">Etusivu</a>
-            <a href="#" class="text-base font-medium text-antique-white hover:text-gray-900">Ajankohtaista</a>
-            <a href="#" class="text-base font-medium text-antique-white hover:text-gray-900">Ohjelma</a>
-            <a href="#" class="text-base font-medium text-antique-white hover:text-gray-900">Yhteystiedot</a>
+            <a
+              href="#"
+              class="text-base font-medium text-antique-white hover:text-gray-900"
+              >Etusivu</a
+            >
+            <a
+              href="#"
+              class="text-base font-medium text-antique-white hover:text-gray-900"
+              >Ajankohtaista</a
+            >
+            <a
+              href="#"
+              class="text-base font-medium text-antique-white hover:text-gray-900"
+              >Ohjelma</a
+            >
+            <a
+              href="#"
+              class="text-base font-medium text-antique-white hover:text-gray-900"
+              >Yhteystiedot</a
+            >
           </nav>
         </div>
       </div>
-    
 
-        <!--Mobile menu, show/hide based on mobile menu state.
+      <!--Mobile menu, show/hide based on mobile menu state.
     
         Entering: "duration-200 ease-out"
           From: "opacity-0 scale-95"
@@ -38,76 +52,145 @@
           From: "opacity-100 scale-100"
           To: "opacity-0 scale-95"-->
 
-      <div class="absolute inset-x-0 top-0 origin-top-right transform opacity-80  transition md:hidden">
-        <div class="divide-y-2 divide-black  bg-black shadow-lg ring-1 ring-black ring-opacity-5">
+      <div
+        class="absolute inset-x-0 top-0 origin-top-right transform opacity-80 transition md:hidden"
+      >
+        <div
+          class="divide-y-2 divide-black bg-black shadow-lg ring-1 ring-black ring-opacity-5"
+        >
           <div class="px-5 pt-5 pb-4">
             <div class="flex items-center justify-between">
-              <div>
-                
-              </div>
+              <div></div>
               <div class="-mr-2">
-                <button type="button" id="menux" class="inline-flex items-center justify-center rounded-md bg-antique-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset">
+                <button
+                  type="button"
+                  id="menux"
+                  class="inline-flex items-center justify-center rounded-md bg-antique-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset"
+                >
                   <span class="sr-only">Close menu</span>
                   <!-- Heroicon name: outline/x-mark -->
-                  <svg id="iconX" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  <svg
+                    id="iconX"
+                    class="h-6 w-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   </svg>
-                  <svg id="iconBurger" class=" h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  <svg
+                    id="iconBurger"
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    />
                   </svg>
-                  
                 </button>
               </div>
             </div>
           </div>
           <div id="dropdown" class="space-y-6 py-6 px-5 bg-black hidden">
             <div class="grid grid-cols-1 gap-y-4 gap-x-8 opacity-1">
-              <a href="#" class="text-base font-medium text-antique-white hover:text-gray-700">Etusivu</a>
-    
-              <a href="#" class="text-base font-medium text-antique-white hover:text-gray-700">Ajankohtaista</a>
-    
-              <a href="#" class="text-base font-medium text-antique-white hover:text-gray-700">Ohjelma</a>
-    
-              <a href="#" class="text-base font-medium text-antique-white hover:text-gray-700">Yhteystiedot</a>
+              <a
+                href="#"
+                class="text-base font-medium text-antique-white hover:text-gray-700"
+                >Etusivu</a
+              >
+
+              <a
+                href="#"
+                class="text-base font-medium text-antique-white hover:text-gray-700"
+                >Ajankohtaista</a
+              >
+
+              <a
+                href="#"
+                class="text-base font-medium text-antique-white hover:text-gray-700"
+                >Ohjelma</a
+              >
+
+              <a
+                href="#"
+                class="text-base font-medium text-antique-white hover:text-gray-700"
+                >Yhteystiedot</a
+              >
             </div>
           </div>
         </div>
       </div>
     </div>
     <main class="">
-      <div>
-        <img src="img/banner.webp" alt="">
+      <div
+        class="bg-[url('/img/banner.webp')] h-96 bg-cover bg-no-repeat bg-center"
+      ></div>
+      <div class="flex flex-col md:flex-row bg-tuscan-red pt-20">
+        <div
+          class="w-1/2 text-antique-white text-center font-bold text-3xl mb-10"
+        >
+          <h1 class="mb-4">Mahdollisuuksien maisemia - Tapahtuma</h1>
+          <img src="img/banner.webp" class="w-2/3 m-auto" alt="" />
+        </div>
+
+        <div>
+          <h1
+            class="text-antique-white text-center font-semibold text-3xl mb-5"
+          >
+            Haluatko osallistua livestreamiin?
+          </h1>
+          <p>Valitse vain käyttäjätunnus ja huone johon haluat littyä!</p>
+          <form action="chat.html">
+            <div class="form">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Enter username..."
+                required
+              />
+            </div>
+            <div class="form">
+              <label for="room">Room</label>
+              <select name="room" id="room">
+                <option value="Room 1">Room 1</option>
+                <option value="Room 2">Room2</option>
+              </select>
+            </div>
+            <button type="submit" class="bg-antique-white rounded-lg">
+              Liity nyt
+            </button>
+          </form>
+        </div>
       </div>
-
-
-
-
-
-
-
-
-      <form action="chat.html">
-        <div class="form">
-          <label for="username">Username</label>
-          <input
-            type="text"
-            name="username"
-            id="username"
-            placeholder="Enter username..."
-            required
-          />
+      <div>
+        <div class="md:p-32  ">
+          <p class="bg-xiketic p-10 text-antique-white md:w-1/2 m-auto ">
+            Luova toiminta, itsensä ilmaiseminen, kulttuurinen toimijuus ja
+            taidekokemukset lisäävät osallisuutta ja hyvinvointia ja ovat siksi
+            tärkeä osa yksilön merkityksellistä elämää ja koko yhteiskuntaa.
+            Viime vuosina aiheesta on saatu paljon tutkimustietoa. Mitä voimme
+            viedä tutkimuksesta käytäntöön?
+          </p>
         </div>
-        <div class="form">
-          <label for="room">Room</label>
-          <select name="room" id="room">
-            <option value="Room 1">Room 1</option>
-            <option value="Room 2">Room2 </option>
-          </select>
-        </div>
-        <button type="submit" class="btn">Join Chat</button>
-      </form>
+      </div>
     </main>
-  </div>
-  <script src="menu.js"></script>
+    <footer class="h-20 bg-manatee text-center"> Footer </footer>
+    <script src="menu.js"></script>
   </body>
 </html>

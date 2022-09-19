@@ -1,4 +1,4 @@
- 'use strict';
+'use strict';
 
 /*const socket = io('http://10.114.32.18');
 
@@ -20,7 +20,10 @@ const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
 //Get username and room from URL
-const parsedSearch = (location.search.substring(0,1) === '?') ? location.search.substring(1, location.search.length) : location.search;
+const parsedSearch =
+  location.search.substring(0, 1) === '?'
+    ? location.search.substring(1, location.search.length)
+    : location.search;
 const { username, room } = Qs.parse(parsedSearch);
 
 /* const {username, room} = Qs.parse(location.search, {
@@ -37,53 +40,58 @@ socket.emit('joinRoom', { username, room });
 
 //Get room and users
 socket.on('roomUsers', ({ room, users }) => {
-    outputRoomName(room);
-    outputUsers(users);
+  outputRoomName(room);
+  outputUsers(users);
 });
 
 //Message from server
-socket.on('message', message => {
-    console.log(message);
-    outputMessage(message);
+socket.on('message', (message) => {
+  console.log(message);
+  outputMessage(message);
 
-    // Scroll down
-    chatMessages.scrollTop = chatMessages.scrollHeight;
+  // Scroll down
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 });
 
 // Message submit
 chatForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    //Get message text
-    const msg = e.target.elements.msg.value;
+  //Get message text
+  const msg = e.target.elements.msg.value;
 
-    //Emit message to server
-    socket.emit('chatMessage', msg);
+  //Emit message to server
+  socket.emit('chatMessage', msg);
 
-    //Clear input
-    e.target.elements.msg.value = '';
-    e.target.elements.msg.focus();
+  //Clear input
+  e.target.elements.msg.value = '';
+  e.target.elements.msg.focus();
 });
 
 //Output message to DOM
-function outputMessage(message){
-    const li = document.createElement('li');
-    li.classList.add('message');
-    li.innerHTML = `${message.username}: ${message.text}`;
-    document.querySelector('.chat-messages').appendChild(li);
+function outputMessage(message) {
+  const li = document.createElement('li');
+  li.classList.add(
+    'py-2',
+    'px-2',
+    'bg-tuscan-red',
+    'rounded-lg',
+    'text-antique-white',
+    'w-fit',
+    'm-5'
+  );
+  li.innerHTML = `${message.username}: ${message.text}`;
+  document.querySelector('.chat-messages').appendChild(li);
 }
 
 //Add room name to DOM
-function outputRoomName(room){
-    roomName.innerText = room;
+function outputRoomName(room) {
+  roomName.innerText = room;
 }
 
 //Add users to DOM
-function outputUsers(users){
-    userList.innerHTML = `
-        ${users.map(user => `<li>${user.username}</li>`).join('')}
+function outputUsers(users) {
+  userList.innerHTML = `
+        ${users.map((user) => `<li>${user.username}</li>`).join('')}
     `;
 }
-
-
-
