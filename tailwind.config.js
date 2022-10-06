@@ -11,30 +11,29 @@ module.exports = {
     },
     extend: {
       colors: {
-        "manatee": "#9396A7",
-        "tuscan-red": "#6C4245",
-        "xiketic": "#180E11",
-        "antique-white": "#FCF0DE",
-        "burnished-brown": "#997470",
-        "white": "#FFFFFF",
-        "black": "#000000",
+        "my-pink": "#D152F3",
+        "my-blue": "#091221",
+        white: "#FFFFFF",
+        black: "#000000",
       },
-      keyframes:{
+      keyframes: {
         Entering: {
-          From: "opacity-0 scale-95" ,
-          To: "opacity-100 scale-100"
+          From: "opacity-0 scale-95",
+          To: "opacity-100 scale-100",
         },
         Leaving: {
           From: "opacity-100 scale-100",
-          To: "opacity-0 scale-95"
-        }
+          To: "opacity-0 scale-95",
+        },
       },
       Animation: {
         Entering: "Entering 2s ease-out",
-        Leaving: "Leaving 1s ease-in"
-      }
-
-      }
+        Leaving: "Leaving 1s ease-in",
+      },
+      brightness: {
+        70: ".70",
+      },
     },
-    plugins: [],
-  }
+  },
+  plugins: [],
+};
