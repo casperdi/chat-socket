@@ -7,7 +7,7 @@ videojs(myPlayer, {
   autoplay: false,
   muted: true,
   loop: true,
-  fluid: true,
+  fluid: false,
   preload: 'auto',
   aspectRatio: '16:9',
 });

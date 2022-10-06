@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <p id="countdown"></p>
+
+    <iframe
+      allowfullscreen
+      id="wallsio-iframe"
+      src="https://my.walls.io/r7bip?nobackground=1&amp;show_header=0&amp;show_post_info=1"
+      style="border: 0; height: 375px; width: 100%"
+      loading="lazy"
+      title="My social wall"
+    ></iframe>
+
+    <form class="flex flex-col" action="https://formspree.io/f/mzbwgynd" method="POST">
+        <input type="text" name="Name" placeholder="Nimi" required>
+        <input type="email" name="Email" placeholder="Sähköposti" required>
+        <textarea name="Message" id="" placeholder="Viesti" cols="30" rows="5" required></textarea>
+        <button type="submit">Lähetä</button>
+    </form>
+  </body>
+  <script src="utilities.js"></script>
+</html>

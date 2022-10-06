@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-bgblue font-montserrat">
+    <nav></nav>
+    <main>
+      <section
+        class="bg-[url('/img/banneri.png')] h-48 bg-cover bg-no-repeat bg-center flex justify-center items-center"
+      >
+        <h1 class="text-white font-extrabold text-2xl">YHTEYSTIEDOT</h1>
+      </section>
+      <section class="text-white">
+        <p class="m-5">
+          Tapahtuman tuottaa Metropolia Ammattikorkeakoulu, joka työllään
+          korkeakouluna edistää luovuuteen liittyvän tiedon ja osaamisen
+          näkökulmia osana eri alojen tulevaisuutta.
+        </p>
+
+        <p class="m-5">
+          Ota yhteys tapahtuman tuotantotiimiin
+          kulttuurihyvinvointi@metropolia.fi tai liity tapahtuman
+          sähköpostilistalle, ja saat ajankohtaisimmat tiedot tapahtumasta.
+        </p>
+
+        <p class="m-5">
+          Seuraa meitä myös somessa tunnisteella #mahdollisuuksienmaisemia.
+        </p>
+        <p class="m-5">
+          Tapahtumatuottajat: Elina Ala-Nikkola ja Johanna Niemi
+        </p>
+      </section>
+      <section class="text-white">
+        <h2 class="text-center font-semibold text-lg">Palautetta?</h2>
+        <form
+          class="flex flex-col border-2 m-5"
+          action="https://formspree.io/f/mzbwgynd"
+          method="POST"
+        >
+          <input
+            class="bg-bgblue border-2 m-3 p-2"
+            type="text"
+            name="Name"
+            placeholder="Nimi"
+            required
+          />
+          <input
+            class="bg-bgblue border-2 m-3 p-2"
+            type="email"
+            name="Email"
+            placeholder="Sähköposti"
+            required
+          />
+          <textarea
+            class="bg-bgblue border-2 m-3 p-2"
+            name="Message"
+            id=""
+            placeholder="Kirjoita tähän..."
+            cols="30"
+            rows="5"
+            required
+          ></textarea>
+          <button class="bg-hotpink m-3 p-2" type="submit">Lähetä</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
