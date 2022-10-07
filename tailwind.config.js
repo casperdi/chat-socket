@@ -11,15 +11,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        manatee: '#9396A7',
-        'tuscan-red': '#6C4245',
-        xiketic: '#180E11',
-        'antique-white': '#FCF0DE',
-        'burnished-brown': '#997470',
         white: '#FFFFFF',
         black: '#000000',
-        'bgblue': '#1D2635',
-        hotpink: '#D152F3',
+        'my-blue': '#1D2635',
+        'my-pink': '#D152F3',
       },
       fontFamily:{
         'montserrat': ['Montserrat', 'sans-serif']
