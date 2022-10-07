@@ -16,22 +16,11 @@ module.exports = {
         white: "#FFFFFF",
         black: "#000000",
       },
-      keyframes: {
-        Entering: {
-          From: "opacity-0 scale-95",
-          To: "opacity-100 scale-100",
-        },
-        Leaving: {
-          From: "opacity-100 scale-100",
-          To: "opacity-0 scale-95",
-        },
-      },
-      Animation: {
-        Entering: "Entering 2s ease-out",
-        Leaving: "Leaving 1s ease-in",
-      },
       brightness: {
         70: ".70",
+      },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },

@@ -414,11 +414,21 @@ video {
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Montserrat';
+}
+
 section {
   height: auto;
   width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgb(9 18 33 / var(--tw-bg-opacity));
+}
+
+article {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  width: 33.333333%;
 }
 
 *, ::before, ::after {
@@ -639,6 +649,21 @@ section {
   margin-bottom: 1.25rem;
 }
 
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.my-7 {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .-mr-2 {
   margin-right: -0.5rem;
 }
@@ -649,6 +674,22 @@ section {
 
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
 .block {
@@ -790,10 +831,6 @@ section {
   justify-content: space-around;
 }
 
-.justify-evenly {
-  justify-content: space-evenly;
-}
-
 .gap-y-4 {
   row-gap: 1rem;
 }
@@ -824,6 +861,10 @@ section {
 .divide-black > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-divide-opacity));
+}
+
+.self-center {
+  align-self: center;
 }
 
 .overflow-scroll {
@@ -1004,6 +1045,11 @@ section {
   line-height: 2.25rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -1043,6 +1089,11 @@ section {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-my-pink {
+  --tw-text-opacity: 1;
+  color: rgb(209 82 243 / var(--tw-text-opacity));
 }
 
 .opacity-80 {
@@ -1235,10 +1286,6 @@ section {
 }
 
 @media (min-width: 1024px) {
-  .lg\:flex {
-    display: flex;
-  }
-
   .lg\:w-0 {
     width: 0px;
   }
