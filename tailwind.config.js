@@ -13,7 +13,7 @@ module.exports = {
       colors: {
         white: '#FFFFFF',
         black: '#000000',
-        'my-blue': '#1D2635',
+        'my-blue': '#091221',
         'my-pink': '#D152F3',
       },
       fontFamily:{

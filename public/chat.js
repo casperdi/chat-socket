@@ -32,8 +32,8 @@ const { username, room } = Qs.parse(parsedSearch);
 
 console.log(username, room);
 
-//const socket = io('http://localhost:3000');
-const socket = io('https://sweatbaby.norwayeast.cloudapp.azure.com');
+const socket = io('http://localhost:3000');
+//const socket = io('https://sweatbaby.norwayeast.cloudapp.azure.com');
 
 //Join chatroom
 socket.emit('joinRoom', { username, room });
@@ -74,9 +74,9 @@ function outputMessage(message) {
   li.classList.add(
     'py-2',
     'px-2',
-    'bg-tuscan-red',
+    'bg-my-blue',
     'rounded-lg',
-    'text-antique-white',
+    'text-white',
     'w-fit',
     'm-5'
   );
