@@ -14,9 +14,12 @@
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="w-full fixed z-50">
+    <div class="absolute w-full">
       <div class="mx-auto hidden md:flex max-w-full px-4">
-        <div class="flex justify-around py-6 md:justify-start md:space-x-10">
+        <div
+          class="flex items-center justify-between py-6 md:justify-start md:space-x-10"
+        >
+          <div class="-my-2 -mr-2 md:hidden"></div>
           <nav id="menu-xl" class="hidden space-x-10 md:flex">
             <a
               href="#"
@@ -31,7 +34,7 @@
             <a
               href="#"
               class="text-base font-medium text-white hover:bg-my-blue hover:bg-opacity-70 transition ease-in-out delay-100 hover:border-b-2 border-my-pink p-3"
-              >Ohjelma2</a
+              >Ohjelma</a
             >
             <a
               href="#"
@@ -52,10 +55,10 @@
           To: "opacity-0 scale-95"-->
 
       <div
-        class="absolute inset-x-0 top-0 origin-top-right transform opacity-80 transition md:hidden"
+        class="absolute inset-x-0 top-0 origin-top-right transform transition md:hidden"
       >
         <div
-          class="divide-y-2 divide-black bg-black shadow-lg ring-1 ring-black ring-opacity-5"
+          class="divide-y-2 divide-my-blue bg-my-blue shadow-lg ring-1 ring-black ring-opacity-5"
         >
           <div class="px-5 pt-5 pb-4">
             <div class="flex items-center justify-between">
@@ -64,7 +67,7 @@
                 <button
                   type="button"
                   id="menux"
-                  class="inline-flex items-center justify-center rounded-md bg-antique-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset"
+                  class="inline-flex items-center justify-center rounded-md p-2 text-white hover:text-my-pink focus:outline-none focus:ring-2 focus:ring-inset"
                 >
                   <span class="sr-only">Close menu</span>
                   <!-- Heroicon name: outline/x-mark -->
@@ -104,29 +107,29 @@
               </div>
             </div>
           </div>
-          <div id="dropdown" class="space-y-6 py-6 px-5 bg-black hidden">
+          <div id="dropdown" class="space-y-6 py-6 px-5 bg-my-blue hidden">
             <div class="grid grid-cols-1 gap-y-4 gap-x-8 opacity-1">
               <a
                 href="#"
-                class="text-base font-medium text-antique-white hover:text-gray-700"
+                class="text-base font-medium text-white hover:text-my-pink"
                 >Etusivu</a
               >
 
               <a
                 href="#"
-                class="text-base font-medium text-antique-white hover:text-gray-700"
+                class="text-base font-medium text-white hover:text-my-pink"
                 >Ajankohtaista</a
               >
 
               <a
                 href="#"
-                class="text-base font-medium text-antique-white hover:text-gray-700"
+                class="text-base font-medium text-white hover:text-my-pink"
                 >Ohjelma</a
               >
 
               <a
                 href="#"
-                class="text-base font-medium text-antique-white hover:text-gray-700"
+                class="text-base font-medium text-white hover:text-my-pink"
                 >Yhteystiedot</a
               >
             </div>
@@ -137,8 +140,16 @@
 
     <main class="">
       <section
-        class="bg-cover h-screen bg-no-repeat bg-center brightness-70 bg-[url('/img/background.jpg')]"
-      ></section>
+        class="bg-cover h-screen bg-no-repeat bg-center bg-[url('/img/background.jpg')] flex flex-col justify-center"
+      >
+        <h1 class="text-white text-3xl self-center uppercase font-bold">
+          Mahdollisuuksien Maisemia
+        </h1>
+        <p id="countdown" class="self-center"></p>
+        <h1 class="text-white text-3xl self-center uppercase font-bold">
+          05/10/2022
+        </h1>
+      </section>
 
       <section class="flex">
         <div class="w-1/2">
@@ -262,5 +273,6 @@
       <footer class="h-20 bg-my-blue text-center">Footer</footer>
     </main>
     <script src="menu.js"></script>
+    <script src="utilities.js"></script>
   </body>
 </html>
