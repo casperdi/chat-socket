@@ -15,10 +15,8 @@
   </head>
   <body>
     <div class="absolute w-full">
-      <div class="mx-auto hidden md:flex max-w-full px-4">
-        <div
-          class="flex items-center justify-between py-6 md:justify-start md:space-x-10"
-        >
+      <div class="mx-auto hidden md:flex md:justify-evenly max-w-full px-4">
+        <div class="py-6">
           <div class="-my-2 -mr-2 md:hidden"></div>
           <nav id="menu-xl" class="hidden space-x-10 md:flex">
             <a
@@ -142,29 +140,35 @@
       <section
         class="bg-cover h-screen bg-no-repeat bg-center bg-[url('/img/background.jpg')] flex flex-col justify-center"
       >
-        <h1 class="text-white text-3xl self-center uppercase font-bold">
+        <h1
+          class="text-white text-xl md:text-3xl self-center uppercase font-bold mx-auto"
+        >
           Mahdollisuuksien Maisemia
         </h1>
         <p id="countdown" class="self-center"></p>
-        <h1 class="text-white text-3xl self-center uppercase font-bold">
+        <h1
+          class="text-white text-xl md:text-3xl self-center uppercase font-bold"
+        >
           05/10/2022
         </h1>
       </section>
 
-      <section class="flex">
-        <div class="w-1/2">
+      <section class="flex flex-col-reverse lg:flex-row">
+        <div class="w-screen lg:w-1/2">
           <figure>
             <img src="/img/fabio-lucas-q04lt34O1uk-unsplash.jpg" alt="boy" />
           </figure>
         </div>
-        <div class="w-1/2 flex flex-col">
-          <h1 class="text-white text-center font-semibold text-3xl mb-5">
+        <div class="w-full lg:w-1/2 flex flex-col">
+          <h1
+            class="text-white text-center font-semibold text-2xl md:text-3xl mb-5 mt-5"
+          >
             Haluatko osallistua livestreamiin?
           </h1>
           <p class="text-white text-center">
             Valitse vain käyttäjätunnus ja huone johon haluat littyä!
           </p>
-          <form action="chat.html">
+          <form action="chat.html" class="flex justify-center">
             <form>
               <input
                 type="text"
@@ -172,14 +176,14 @@
                 id="username"
                 placeholder="Käyttäjätunnus"
                 required
-                class="border-solid border-2 border-white bg-my-blue active:bg-my-blue text-white py-4 px-3 w-3/5 my-5"
+                class="border-solid border-2 border-white bg-my-blue active:bg-my-blue text-white py-4 px-3 w-11/12 lg:w-3/5 my-5"
               />
             </form>
-            <form>
+            <form class="flex justify-center">
               <select
                 name="room"
                 id="room"
-                class="border-solid border-2 border-white bg-my-blue text-white py-4 px-3 w-3/5 mb-5"
+                class="border-solid border-2 border-white bg-my-blue text-white py-4 px-3 w-11/12 lg:w-3/5"
               >
                 <option value="Room 1">Room 1</option>
                 <option value="Room 2">Room2</option>
@@ -187,7 +191,7 @@
             </form>
             <button
               type="submit"
-              class="bg-my-pink text-white w-3/5 py-4 uppercase"
+              class="bg-my-pink text-white hover:bg-white hover:text-my-pink hover:font-bold w-11/12 lg:w-3/5 py-4 uppercase my-10 mx-auto"
             >
               STREAMIIN
             </button>
@@ -196,16 +200,18 @@
       </section>
 
       <section class="flex flex-col">
-        <div class="self-center my-20">
-          <h1 class="text-white text-3xl font-bold mb-3">
+        <div class="md:self-center mt-20 mb-10">
+          <h1
+            class="text-white text-2xl md:text-3xl text-center font-bold mb-3"
+          >
             Luovuus sinun työssäsi?
           </h1>
-          <h2 class="text-white text-3xl font-bold">
+          <h2 class="text-white text-center text-xl md:text-3xl font-bold">
             Mitä luovuus työelämässä mahdollistaa?
           </h2>
         </div>
 
-        <div class="flex justify-around mx-5">
+        <div class="flex flex-col md:flex-col">
           <article>
             <h3 class="text-white text-xl font-bold my-7">Mikä tapahtuma?</h3>
             <p class="text-white">
@@ -237,7 +243,7 @@
               >.
             </p>
           </article>
-          <article>
+          <article class="mb-10">
             <h3 class="text-white text-xl font-bold my-7">
               Ohjelma ja kenelle?
             </h3>
@@ -259,8 +265,8 @@
       </section>
 
       <section>
-        <div class="md:p-32">
-          <p class="bg-my-pink p-10 text-white w-1/2 m-auto">
+        <div class="md:p-32 bg-my-pink w-full md:w-1/2">
+          <p class="p-10 text-white">
             Luova toiminta, itsensä ilmaiseminen, kulttuurinen toimijuus ja
             taidekokemukset lisäävät osallisuutta ja hyvinvointia ja ovat siksi
             tärkeä osa yksilön merkityksellistä elämää ja koko yhteiskuntaa.
