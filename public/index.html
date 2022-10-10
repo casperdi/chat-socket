@@ -7,13 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;800&display=swap"
       rel="stylesheet"
     />
 
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="bg-my-blue">
     <div class="absolute w-full">
       <div class="mx-auto hidden md:flex md:justify-evenly max-w-full px-4">
         <div class="py-6">
@@ -136,7 +136,10 @@
         >
           Mahdollisuuksien Maisemia
         </h1>
-        <p id="countdown" class="self-center"></p>
+        <p
+          id="countdown"
+          class="self-center text-xl md:text-3xl xl:text-8xl mx-auto uppercase text-white"
+        ></p>
         <h1
           class="text-white text-xl md:text-3xl self-center uppercase font-bold"
         >
@@ -275,6 +278,7 @@
           style="border: 0; height: 375px; width: 100%"
           loading="lazy"
           title="My social wall"
+          class="my-10"
         ></iframe>
       </section>
 
