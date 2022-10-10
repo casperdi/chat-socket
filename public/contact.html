@@ -14,7 +14,118 @@
     />
   </head>
   <body class="bg-my-blue font-montserrat">
-    <nav></nav>
+    <div class="absolute w-full">
+      <div class="mx-auto hidden md:flex md:justify-evenly max-w-full px-4">
+        <div class="py-6">
+          <div class="-my-2 -mr-2 md:hidden"></div>
+          <nav id="menu-xl" class="hidden space-x-10 md:flex">
+            <a
+              href="index.html"
+              class="text-base font-medium text-white hover:bg-my-blue hover:bg-opacity-70 transition ease-in-out delay-100 hover:border-b-2 border-my-pink p-3"
+              >Etusivu</a
+            >
+            <a
+              href="#"
+              class="text-base font-medium text-white hover:bg-my-blue hover:bg-opacity-70 transition ease-in-out delay-100 hover:border-b-2 border-my-pink p-3"
+              >Ajankohtaista</a
+            >
+            <a
+              href="schedule.html"
+              class="text-base font-medium text-white hover:bg-my-blue hover:bg-opacity-70 transition ease-in-out delay-100 hover:border-b-2 border-my-pink p-3"
+              >Ohjelma</a
+            >
+            <a
+              href="contact.html"
+              class="text-base font-medium text-white hover:bg-my-blue hover:bg-opacity-70 transition ease-in-out delay-100 hover:border-b-2 border-my-pink p-3"
+              >Yhteystiedot</a
+            >
+          </nav>
+        </div>
+      </div>
+
+      <div
+        class="absolute inset-x-0 top-0 origin-top-right transform transition md:hidden"
+      >
+        <div
+          class="divide-y-2 divide-my-blue bg-my-blue shadow-lg ring-1 ring-black ring-opacity-5"
+        >
+          <div class="px-5 pt-5 pb-4">
+            <div class="flex items-center justify-between">
+              <div></div>
+              <div class="-mr-2">
+                <button
+                  type="button"
+                  id="menux"
+                  class="inline-flex items-center justify-center rounded-md p-2 text-white hover:text-my-pink focus:outline-none focus:ring-2 focus:ring-inset"
+                >
+                  <span class="sr-only">Close menu</span>
+                  <!-- Heroicon name: outline/x-mark -->
+                  <svg
+                    id="iconX"
+                    class="h-6 w-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                  <svg
+                    id="iconBurger"
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div id="dropdown" class="space-y-6 py-6 px-5 bg-my-blue hidden">
+            <div class="grid grid-cols-1 gap-y-4 gap-x-8 opacity-1">
+              <a
+                href="#"
+                class="text-base font-medium text-white hover:text-my-pink"
+                >Etusivu</a
+              >
+
+              <a
+                href="#"
+                class="text-base font-medium text-white hover:text-my-pink"
+                >Ajankohtaista</a
+              >
+
+              <a
+                href="#"
+                class="text-base font-medium text-white hover:text-my-pink"
+                >Ohjelma</a
+              >
+
+              <a
+                href="#"
+                class="text-base font-medium text-white hover:text-my-pink"
+                >Yhteystiedot</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <main>
       <section
         class="bg-[url('/img/banneri.png')] h-48 bg-cover bg-no-repeat bg-center flex justify-center items-center xl:h-64"
