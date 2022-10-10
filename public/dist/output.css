@@ -627,12 +627,12 @@ video {
   margin-bottom: 1rem;
 }
 
-.mb-10{
-  margin-bottom: 2.5rem;
-}
-
 .-mr-2{
   margin-right: -0.5rem;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
 }
 
 .mb-5{
@@ -821,14 +821,14 @@ video {
   border-bottom-width: calc(2px * var(--tw-divide-y-reverse));
 }
 
-.divide-black > :not([hidden]) ~ :not([hidden]){
-  --tw-divide-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-divide-opacity));
-}
-
 .divide-my-blue > :not([hidden]) ~ :not([hidden]){
   --tw-divide-opacity: 1;
   border-color: rgb(9 18 33 / var(--tw-divide-opacity));
+}
+
+.divide-black > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-divide-opacity));
 }
 
 .overflow-scroll{
@@ -874,14 +874,14 @@ video {
   border-color: rgb(9 18 33 / var(--tw-border-opacity));
 }
 
-.border-black{
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
 .border-my-pink{
   --tw-border-opacity: 1;
   border-color: rgb(209 82 243 / var(--tw-border-opacity));
+}
+
+.border-black{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-my-blue{
@@ -936,12 +936,12 @@ video {
   padding: 0.625rem;
 }
 
-.p-10{
-  padding: 2.5rem;
-}
-
 .p-3{
   padding: 0.75rem;
+}
+
+.p-10{
+  padding: 2.5rem;
 }
 
 .py-2{
@@ -1008,14 +1008,14 @@ video {
   line-height: 1.25rem;
 }
 
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-3xl{
@@ -1036,17 +1036,22 @@ video {
   font-weight: 700;
 }
 
-.font-extrabold{
-  font-weight: 800;
-}
-
 .font-medium{
   font-weight: 500;
+}
+
+.font-extrabold{
+  font-weight: 800;
 }
 
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-my-pink{
+  --tw-text-opacity: 1;
+  color: rgb(209 82 243 / var(--tw-text-opacity));
 }
 
 .text-gray-500{
@@ -1057,11 +1062,6 @@ video {
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.text-my-pink{
-  --tw-text-opacity: 1;
-  color: rgb(209 82 243 / var(--tw-text-opacity));
 }
 
 .text-emerald-800{
@@ -1132,16 +1132,16 @@ video {
   transition-duration: 100ms;
 }
 
+.ease-in-out{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .ease-out{
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 .ease-in{
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
-.ease-in-out{
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover\:border-b-2:hover{

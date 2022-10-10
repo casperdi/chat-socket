@@ -5,7 +5,7 @@ console.log(myPlayer);
 videojs(myPlayer, {
   controls: true,
   autoplay: false,
-  muted: true,
+  muted: false,
   loop: true,
   fluid: false,
   liveui: true,
