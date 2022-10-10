@@ -21,7 +21,10 @@
 @tailwind utilities;
 
 @layer components {
-  .active{
+  .active-big{
     @apply border-b-2 border-my-pink;
+  }
+  .active-small{
+    @apply font-bold text-my-pink;
   }
 }
