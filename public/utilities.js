@@ -4,7 +4,7 @@
 const countDownDate = new Date("Oct 13, 2022 12:00:00").getTime();
 
 // Update the count down every 1 second
-let x = setInterval(function () {
+let y = setInterval(function () {
   // Get today's date and time
   let now = new Date().getTime();
 
@@ -23,7 +23,7 @@ let x = setInterval(function () {
 
   // If the count down is over, write some text
   if (distance < 0) {
-    clearInterval(x);
+    clearInterval(y);
     document.getElementById("countdown").innerHTML = "Tilaisuus käynnissä";
   }
 }, 1000);
