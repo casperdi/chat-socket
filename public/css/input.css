@@ -21,4 +21,7 @@
 @tailwind utilities;
 
 @layer components {
+  .active{
+    @apply border-b-2 border-my-pink;
+  }
 }
