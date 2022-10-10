@@ -699,12 +699,12 @@ video {
   height: 12rem;
 }
 
-.h-96{
-  height: 24rem;
-}
-
 .h-20{
   height: 5rem;
+}
+
+.h-96{
+  height: 24rem;
 }
 
 .w-8{
