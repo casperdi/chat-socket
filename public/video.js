@@ -8,6 +8,8 @@ videojs(myPlayer, {
   muted: true,
   loop: true,
   fluid: false,
+  liveui: true,
+  responsive: true,
   preload: 'auto',
   aspectRatio: '16:9',
 });

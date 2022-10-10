@@ -12,35 +12,55 @@
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
   <body>
-   
-    <div class="chat-container bg-my-blue h-screen flex flex-col md:flex-row md:flex-nowrap p-5">
-        <video id="my-video" class="video-js vjs-theme-city vjs-casper w-auto h-max md:w-1/3">
+    <div
+    
+      class="chat-container bg-my-blue h-screen flex flex-col p-5 pt-20 md:flex-row md:flex-nowrap  md:p-5 lg:p-20"
+    >
+    <a href="index.html" class="btn text-white absolute text-center top-4 left-4"
+            ><svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              ></path>
+            </svg> Takaisin
+          </a>
+      <article class="w-full m-auto max-w-xl md:m-0 md:mt-16 lg:mt-0 md:max-w-none md:w-2/3">
+        <video id="my-video" class="video-js vjs-theme-city">
           <source src="img/video.mp4" type="video/mp4" />
           <!-- <source src="http://195.148.104.124:1935/jakelu/myStrea/playlist.m3u8" 
         type="application/x-mpegURL"> -->
         </video>
-      <div class="w-full md:w-1/3 md:ml-3 relative  mt-4 rounded-lg">
-        <header class="text-antique-white relative">
-          <h1 class="bg-white opacity-80 rounded-t-lg text-center text-2xl p-2 font-bold">LiveChat</h1>
-          <a href="index.html" class="btn absolute top-2" ><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg></a>
+        <p class="text-white text-2xl font-semibold mt-4 mb-4">Projektin esittely striimi</p>
+      </article>
+      <article class="w-full m-auto max-w-xl relative mt-4 rounded-lg md:m-0 md:max-w-none md:w-1/3 md:mt-16 md:ml-3 lg:mt-0 ">
+        <header class="relative">
+          <h1 class="bg-white rounded-t-lg text-center text-2xl p-2 font-bold">
+            LiveChat
+          </h1>
         </header>
 
-        <main class="chat-main">
+        <div class="chat-main">
           <div class="chat-side">
             <h2 id="room-name" class="text-center bg-white font-bold"></h2>
             <h3 class="hidden">Users</h3>
             <ul class="hidden" id="users"></ul>
           </div>
-          <div class="h-full">
-            <ul class="chat-messages bg-white h-96 pb-5 overflow-scroll"></ul>
+          <div class="">
+            <ul class="chat-messages bg-white h-64  md:h-[calc(100vh-250px)] pb-5 overflow-scroll"></ul>
           </div>
-        </main>
-        <form id="chat-form" class="absolute w-full bottom-0">
-          <label for="msg" class="sr-only">Your message</label>
-          <div
-            class="flex items-center py-2 px-3 bg-white opacity-80 rounded-lg"
-          >
-           <!-- <button
+
+          <form id="chat-form" class="w-full">
+            <label for="msg" class="sr-only">Your message</label>
+            <div class="flex items-center py-2 px-3 bg-white rounded-b-lg">
+              <!-- <button
               type="button"
               class="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
             >
@@ -75,33 +95,32 @@
               </svg>
             </button>
             -->
-            <textarea
-              id="msg"
-              rows="1"
-              class="block mx-4 p-2.5 w-full text-sm text-black bg-antique-white rounded-lg border border-manatee focus:ring-manatee "
-              placeholder="Your message..."
-              required
-            ></textarea>
-            <button
-              type="submit"
-              class="inline-flex justify-center p-2 text-tuscan-red rounded-full cursor-pointer hover:text-my-pink"
-            >
-              <svg
-                class="w-6 h-6 rotate-90"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+              <textarea
+                id="msg"
+                rows="1"
+                class="block mx-4 p-2.5 w-full text-sm text-black rounded-lg border border-my-blue focus:ring-my-pink"
+                placeholder="Kirjoita tähän..."
+                required
+              ></textarea>
+              <button
+                type="submit"
+                class="inline-flex justify-center p-2 text-tuscan-red rounded-full cursor-pointer hover:text-my-pink"
               >
-                <path
-                  d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </form>
-        
-      </div>
-      
+                <svg
+                  class="w-6 h-6 rotate-90"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </article>
     </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.1.2/qs.min.js"

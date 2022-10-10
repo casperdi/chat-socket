@@ -55,14 +55,14 @@ io.on('connection', (socket) => {
     socket.join(user.room);
 
     //Welcome current user
-    socket.emit('message', formatMessage(botName, 'Welcome to Chat'));
+    socket.emit('message', formatMessage(botName, 'Tevetuloa chattihuoneeseen.'));
 
     //Broadcast when a user connects
     socket.broadcast
       .to(user.room)
       .emit(
         'message',
-        formatMessage(botName, `${user.username} has connected`)
+        formatMessage(botName, `${user.username} liittyi`)
       );
 
     //Send users and room info
@@ -86,7 +86,7 @@ io.on('connection', (socket) => {
     if (user) {
       io.to(user.room).emit(
         'message',
-        formatMessage(botName, `${user.username} disconnected`)
+        formatMessage(botName, `${user.username} poistui`)
       );
     }
 
