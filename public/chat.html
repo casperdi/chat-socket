@@ -54,7 +54,7 @@
       <article
         class="w-full m-auto max-w-xl md:m-0 md:mt-16 lg:mt-0 md:max-w-none md:w-2/3"
       >
-        <video id="my-video" class="video-js vjs-theme-city">
+        <video id="my-video" class="video-js vjs-big-play-centered vjs-theme-city">
           <source src="http://195.148.104.124:1935/jakelu/ryhmä4/playlist.m3u8" type="application/x-mpegURL" />
           <!-- <source src="http://195.148.104.124:1935/jakelu/myStrea/playlist.m3u8" 
         type="application/x-mpegURL"> -->
@@ -85,7 +85,7 @@
           </div>
           <div class="">
             <ul
-              class="chat-messages bg-white h-64 md:h-[calc(100vh-250px)] pb-5 overflow-scroll"
+              class="chat-messages w-full bg-white h-64 md:h-[calc(100vh-250px)] pb-5 overflow-scroll"
             ></ul>
           </div>
 
@@ -127,13 +127,14 @@
               </svg>
             </button>
             -->
-              <textarea
+              <input
+                type="text"
                 id="msg"
                 rows="1"
                 class="block mx-4 p-2.5 w-full text-sm text-black rounded-lg border border-my-blue focus:ring-my-pink"
                 placeholder="Kirjoita tähän..."
                 required
-              ></textarea>
+              ></input>
               <button
                 type="submit"
                 class="inline-flex justify-center p-2 text-tuscan-red rounded-full cursor-pointer hover:text-my-pink"

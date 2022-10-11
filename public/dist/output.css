@@ -803,6 +803,12 @@ article {
   max-width: 100%;
 }
 
+.max-w-fit {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
 .origin-top-right {
   transform-origin: top right;
 }

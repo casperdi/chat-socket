@@ -78,7 +78,8 @@ function outputMessage(message) {
     'rounded-lg',
     'text-white',
     'w-fit',
-    'm-5'
+    'm-5',
+    'max-w-fit'
   );
   li.innerHTML = `${message.username}: ${message.text}`;
   document.querySelector('.chat-messages').appendChild(li);
