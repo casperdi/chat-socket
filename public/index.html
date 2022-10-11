@@ -4,59 +4,50 @@
     <title>Chat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="bg-my-blue">
     <div class="absolute w-full">
-      <div class="mx-auto bg-black opacity-80 hidden md:flex max-w-full px-4">
-        <div
-          class="flex items-center justify-between border-b-2 border-black py-6 md:justify-start md:space-x-10"
-        >
-          <div class="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
-              <span class="sr-only text-emerald-800">Your Company</span>
-            </a>
-          </div>
+      <div class="mx-auto hidden md:flex md:justify-evenly max-w-full px-4">
+        <div class="py-6">
           <div class="-my-2 -mr-2 md:hidden"></div>
           <nav id="menu-xl" class="hidden space-x-10 md:flex">
             <a
-              href="#"
-              class="text-base font-medium active: text-antique-white hover:text-gray-900"
+              href="index.html"
+              class="text-base font-medium text-white hover:bg-my-blue hover:bg-opacity-70 transition ease-in-out delay-100 hover:border-b-2 border-my-pink p-3 active-big"
               >Etusivu</a
             >
             <a
               href="#"
-              class="text-base font-medium text-antique-white hover:text-gray-900"
+              class="text-base font-medium text-white hover:bg-my-blue hover:bg-opacity-70 transition ease-in-out delay-100 hover:border-b-2 border-my-pink p-3"
               >Ajankohtaista</a
             >
             <a
-              href="#"
-              class="text-base font-medium text-antique-white hover:text-gray-900"
+              href="schedule.html"
+              class="text-base font-medium text-white hover:bg-my-blue hover:bg-opacity-70 transition ease-in-out delay-100 hover:border-b-2 border-my-pink p-3"
               >Ohjelma</a
             >
             <a
-              href="#"
-              class="text-base font-medium text-antique-white hover:text-gray-900"
+              href="contact.html"
+              class="text-base font-medium text-white hover:bg-my-blue hover:bg-opacity-70 transition ease-in-out delay-100 hover:border-b-2 border-my-pink p-3"
               >Yhteystiedot</a
             >
           </nav>
         </div>
       </div>
 
-      <!--Mobile menu, show/hide based on mobile menu state.
-    
-        Entering: "duration-200 ease-out"
-          From: "opacity-0 scale-95"
-          To: "opacity-100 scale-100"
-        Leaving: "duration-100 ease-in"
-          From: "opacity-100 scale-100"
-          To: "opacity-0 scale-95"-->
-
       <div
-        class="absolute inset-x-0 top-0 origin-top-right transform opacity-80 transition md:hidden"
+        class="absolute inset-x-0 top-0 origin-top-right transform transition md:hidden"
       >
         <div
-          class="divide-y-2 divide-black bg-black shadow-lg ring-1 ring-black ring-opacity-5"
+          class="divide-y-2 divide-my-blue bg-my-blue shadow-lg ring-1 ring-black ring-opacity-5"
         >
           <div class="px-5 pt-5 pb-4">
             <div class="flex items-center justify-between">
@@ -65,7 +56,7 @@
                 <button
                   type="button"
                   id="menux"
-                  class="inline-flex items-center justify-center rounded-md bg-antique-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset"
+                  class="inline-flex items-center justify-center rounded-md p-2 text-white hover:text-my-pink focus:outline-none focus:ring-2 focus:ring-inset"
                 >
                   <span class="sr-only">Close menu</span>
                   <!-- Heroicon name: outline/x-mark -->
@@ -105,29 +96,29 @@
               </div>
             </div>
           </div>
-          <div id="dropdown" class="space-y-6 py-6 px-5 bg-black hidden">
+          <div id="dropdown" class="space-y-6 py-6 px-5 bg-my-blue hidden">
             <div class="grid grid-cols-1 gap-y-4 gap-x-8 opacity-1">
               <a
-                href="#"
-                class="text-base font-medium text-antique-white hover:text-gray-700"
+                href="index.html"
+                class="text-base font-medium text-white hover:text-my-pink active-small"
                 >Etusivu</a
               >
 
               <a
                 href="#"
-                class="text-base font-medium text-antique-white hover:text-gray-700"
+                class="text-base font-medium text-white hover:text-my-pink"
                 >Ajankohtaista</a
               >
 
               <a
-                href="#"
-                class="text-base font-medium text-antique-white hover:text-gray-700"
+                href="schedule.html"
+                class="text-base font-medium text-white hover:text-my-pink"
                 >Ohjelma</a
               >
 
               <a
-                href="#"
-                class="text-base font-medium text-antique-white hover:text-gray-700"
+                href="contact.html"
+                class="text-base font-medium text-white hover:text-my-pink"
                 >Yhteystiedot</a
               >
             </div>
@@ -135,52 +126,141 @@
         </div>
       </div>
     </div>
-    <main class="">
-      <div
-        class="bg-[url('/img/banner.webp')] h-96 bg-cover bg-no-repeat bg-center"
-      ></div>
-      <div class="flex flex-col md:flex-row bg-tuscan-red pt-20 content-center">
-        <div
-          class="md:w-1/2 text-antique-white text-center p-5 font-bold text-3xl mb-10"
-        >
-          <h1 class="mb-4">Mahdollisuuksien maisemia - Tapahtuma</h1>
-          <img src="img/banner.webp" class="w-2/3 m-auto" alt="" />
-        </div>
 
-        <div class="w-2/3 m-auto">
+    <main class="">
+      <section
+        class="bg-cover h-screen bg-no-repeat bg-center bg-[url('/img/background.webp')] flex flex-col justify-center"
+      >
+        <h1
+          class="text-white text-xl md:text-3xl self-center uppercase font-bold mx-auto"
+        >
+          Mahdollisuuksien Maisemia
+        </h1>
+        <p
+          id="countdown"
+          class="self-center text-xl md:text-3xl xl:text-8xl mx-auto uppercase text-white"
+        ></p>
+        <h1
+          class="text-white text-xl md:text-3xl self-center uppercase font-bold"
+        >
+          05/10/2022
+        </h1>
+      </section>
+
+      <section class="flex flex-col-reverse lg:flex-row">
+        <div class="w-screen lg:w-1/2">
+          <figure class="">
+            <img src="/img/boy.webp" alt="boy" />
+          </figure>
+        </div>
+        <div class="w-full lg:w-1/2 flex flex-col p-5 md:p-10">
           <h1
-            class="text-antique-white text-center font-semibold text-3xl mb-5"
+            class="text-white text-center font-semibold text-2xl md:text-3xl mb-5 mt-5"
           >
             Haluatko osallistua livestreamiin?
           </h1>
-          <p>Valitse vain käyttäjätunnus ja huone johon haluat littyä!</p>
-          <form action="chat.html">
-            <div class="form">
-              <label for="username">Username</label>
+          <p class="text-white text-center mb-3">
+            Valitse vain käyttäjätunnus ja huone johon haluat littyä!
+          </p>
+          <form action="chat.html" class="flex justify-center flex-col">
+            <div class="flex justify-center">
               <input
                 type="text"
                 name="username"
                 id="username"
-                placeholder="Enter username..."
+                placeholder="Käyttäjätunnus"
                 required
+                class="border-solid border-2 border-white bg-my-blue active:bg-my-blue text-white py-4 px-3 w-11/12 lg:w-3/5 my-5"
               />
             </div>
-            <div class="form">
-              <label for="room">Room</label>
-              <select name="room" id="room">
+            <div class="flex justify-center">
+              <select
+                name="room"
+                id="room"
+                class="border-solid border-2 border-white bg-my-blue text-white py-4 px-3 w-11/12 lg:w-3/5"
+              >
                 <option value="Room 1">Room 1</option>
                 <option value="Room 2">Room2</option>
               </select>
             </div>
-            <button type="submit" class="bg-antique-white rounded-lg mb-10">
-              Liity nyt
+            <button
+              type="submit"
+              class="bg-my-pink text-white hover:bg-white hover:text-my-pink hover:font-bold w-11/12 lg:w-3/5 py-4 uppercase my-10 mx-auto"
+            >
+              STREAMIIN
             </button>
           </form>
         </div>
-      </div>
-      <div>
-        <div class="md:p-32">
-          <p class="bg-xiketic p-10 text-antique-white md:w-1/2 m-auto">
+      </section>
+
+      <section class="flex flex-col">
+        <div class="md:self-center mt-11 mb-10">
+          <h1
+            class="text-white text-2xl md:text-3xl text-center font-bold mb-3"
+          >
+            Luovuus sinun työssäsi?
+          </h1>
+          <h2 class="text-white text-center text-xl md:text-3xl font-bold">
+            Mitä luovuus työelämässä mahdollistaa?
+          </h2>
+        </div>
+
+        <div class="flex flex-col lg:flex-row mx-auto">
+          <article>
+            <h3 class="text-white text-xl font-bold my-7">Mikä tapahtuma?</h3>
+            <p class="text-white">
+              Miten luovuuden mahdollisuuksia huomioiva näkökulma työelämässä
+              eri aloilla ja ammateissa otetaan käyttöön? Miten luovuuden
+              huomiointi edistää kestävää, hyvää työelämää ja tulevaisuutta?<br /><br />
+
+              Moniäänisessä tapahtumassa kuullaan sekä huippututkijoiden
+              puheenvuoroja että käydään eri alojen ammattilaisten ja
+              opiskelijoiden yhteistä keskustelua luovuuden mahdollisuuksista
+              työelämässä.
+            </p>
+          </article>
+          <article>
+            <h3 class="text-white text-xl font-bold my-7">Missä ja milloin?</h3>
+            <p class="text-white">
+              Metropolia Ammattikorkeakoulun Myllypuron kampuksella
+              (Helsinki)<br />
+
+              keskiviikkona 5.10.2022 klo 8.00-15.00<br />
+
+              Tapahtuma on maksuton, mutta edellyttää sitovaa
+              <a
+                rel="noreferrer noopener"
+                href="https://www.lyyti.fi/reg/tapahtumakavija"
+                target="_blank"
+                class="text-my-pink"
+                >ennakkoilmoittautumista</a
+              >.
+            </p>
+          </article>
+          <article class="mb-10">
+            <h3 class="text-white text-xl font-bold my-7">
+              Ohjelma ja kenelle?
+            </h3>
+            <p class="text-white">
+              Tutustu tapahtuman
+              <a
+                rel="noreferrer noopener"
+                href="#"
+                target="_blank"
+                class="text-my-pink"
+                >ohjelmaan</a
+              >. <br />Tapahtuma on tarkoitettu eri alojen ammateissa toimiville
+              ammattilaisille, asiantuntijoille, yrittäjille ja opiskelijoille.
+              Luovuus tuo mahdollisuuksia kaikilla aloilla!<br />
+              Tapahtumaan on rajoitettu määrä paikkoja, ilmoittaudu ajoissa.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="flex justify-center">
+        <div class="md:p-20 md:m-20 lg:p-10 bg-my-pink w-full lg:w-1/2">
+          <p class="p-10 text-white">
             Luova toiminta, itsensä ilmaiseminen, kulttuurinen toimijuus ja
             taidekokemukset lisäävät osallisuutta ja hyvinvointia ja ovat siksi
             tärkeä osa yksilön merkityksellistä elämää ja koko yhteiskuntaa.
@@ -188,9 +268,23 @@
             viedä tutkimuksesta käytäntöön?
           </p>
         </div>
-      </div>
+      </section>
+
+      <section>
+        <iframe
+          allowfullscreen
+          id="wallsio-iframe"
+          src="https://my.walls.io/r7bip?nobackground=1&amp;show_header=0&amp;show_post_info=1"
+          style="border: 0; height: 375px; width: 100%"
+          loading="lazy"
+          title="My social wall"
+          class="my-10"
+        ></iframe>
+      </section>
+
+      <footer class="h-20 bg-my-blue text-white text-center">© Metropolia Ammattikorkeakoulu 2022</footer>
     </main>
-    <footer class="h-20 bg-manatee text-center">Footer</footer>
     <script src="menu.js"></script>
+    <script src="utilities.js"></script>
   </body>
 </html>

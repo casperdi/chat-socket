@@ -10,6 +10,10 @@
       href="https://unpkg.com/@videojs/themes@1/dist/city/index.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
       .video-js .vjs-play-progress {
         background: rgba(209, 82, 243, 1);
@@ -24,7 +28,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="bg-my-blue">
     <div
       class="chat-container bg-my-blue h-screen flex flex-col p-5 pt-20 md:flex-row md:flex-nowrap md:p-5 lg:p-20"
     >
@@ -51,7 +55,7 @@
         class="w-full m-auto max-w-xl md:m-0 md:mt-16 lg:mt-0 md:max-w-none md:w-2/3"
       >
         <video id="my-video" class="video-js vjs-theme-city">
-          <source src="img/video.mp4" type="video/mp4" />
+          <source src="http://195.148.104.124:1935/jakelu/ryhmä4/playlist.m3u8" type="application/x-mpegURL" />
           <!-- <source src="http://195.148.104.124:1935/jakelu/myStrea/playlist.m3u8" 
         type="application/x-mpegURL"> -->
         </video>
